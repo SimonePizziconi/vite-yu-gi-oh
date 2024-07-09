@@ -14,19 +14,19 @@
 </template>
 
 <style lang="scss" scoped>
+@use "../style/partials/mixins" as *;
+
 
     .header-container{
-        display: flex;
+        @include centerFlex(horizontal);
         height: 100px;
-        
+
 
         .logo-container{
         width: 200px;
-        display: flex;
 
         img{
             width: 100%;
-            background-color: #000;
         }
     }
     }
