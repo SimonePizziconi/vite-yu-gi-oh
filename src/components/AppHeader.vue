@@ -18,6 +18,7 @@
     .header-container{
         display: flex;
         height: 100px;
+        
 
         .logo-container{
         width: 200px;
