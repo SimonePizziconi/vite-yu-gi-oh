@@ -6,7 +6,7 @@ export default{
   name: "app",
   components: {
     AppHeader,
-    AppCardContainer
+    AppCardContainer,
   }
 }
 </script>

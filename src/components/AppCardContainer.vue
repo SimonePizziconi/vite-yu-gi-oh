@@ -1,20 +1,30 @@
 <script>
+import AppCard from "./AppCard.vue";
     export default{
-        name: "AppCardContainer"
+        name: "AppCardContainer",
+        components: {
+            AppCard,
+        }
+
     }
 </script>
 
 <template>
-    <div class="card-container">
+    <div class="container">
         <div class="cards-found">   
             <h3>Sono State Trovate 20 Carte</h3>
         </div>
+        <div class="card-container">
+            <AppCard/>
+        </div>
+        
+
     </div>
 </template>
 
 <style lang="scss" scoped>
 
-    .card-container{
+    .container{
         width: 70%;
         margin: 0 auto;
         background-color: #fff;
@@ -27,6 +37,11 @@
             background-color: #212529;
             color: #fff;
             padding: 20px;
+        }
+
+        .card-container{
+            display: flex;
+            flex-wrap: wrap;
         }
     }
 
