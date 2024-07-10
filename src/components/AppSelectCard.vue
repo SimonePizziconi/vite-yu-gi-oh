@@ -13,14 +13,16 @@
 </script>
 
 <template>
-    <select v-model="store.archetype" @change="$emit(`search`)" name="Type" id="">
-        <option value="">Seleziona archetype</option>
-        <option value="Alien">Alien</option>
-    </select>
+    <div>
+        <label for="archetypeSelect">Scegli un archetipo:</label>
+        <select v-model="store.archetype" @change="$emit(`search`)" name="Type" id="archetypeSelect">
+        <option v-for="archetype in store.archetypeList" :value="archetype.archetype_name">{{ archetype.archetype_name }}</option>
+        </select>
+    </div>
 </template>
 
 <style lang="scss" scoped>
-    select{
+    div {
         position: absolute;
         left: 350px;
         top: 50px;

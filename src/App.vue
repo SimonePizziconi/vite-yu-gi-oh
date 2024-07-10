@@ -29,15 +29,25 @@ export default{
 
       // Condizione per fare una chiamata all'api richiesta
       if(store.archetype !== ``){
-          endPoint += `&archetype=alien`
+          endPoint += `${store.apiNameParam}${store.archetype}`
       }
 
       axios.
       get(endPoint)
       .then(result => {
-        console.log(result.data);
         store.charactersList = result.data.data;
-        console.log(store.charactersList);
+      })
+      .catch(error => {
+        console.log(error);
+      })
+    },
+    getArchetype(){
+      axios.
+      get(store.archetypeApiURL)
+      .then(result => {
+        console.log(result.data);
+        store.archetypeList = result.data;
+        console.log(store.archetypeList);
       })
       .catch(error => {
         console.log(error);
@@ -46,6 +56,7 @@ export default{
   },
   created(){
     this.getCharacters();
+    this.getArchetype();
   }
 }
 </script>
