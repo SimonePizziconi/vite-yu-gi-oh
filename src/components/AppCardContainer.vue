@@ -38,8 +38,6 @@ import { store } from "../store";
         background-color: #fff;
         padding: 50px;
         margin-top: 100px;
-        // DEBUG
-        height: 1000px;
 
         .cards-found{
             background-color: #212529;
@@ -50,6 +48,7 @@ import { store } from "../store";
         .card-container{
             display: flex;
             flex-wrap: wrap;
+            gap: 0 20px;
         }
     }
 

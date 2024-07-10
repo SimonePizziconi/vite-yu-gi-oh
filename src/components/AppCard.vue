@@ -8,11 +8,11 @@
 <template>
     <div class="card-container">
         <div class="img-container">
-            <img :src="info.card_images[0].image_url" alt="">
+            <img :src="info.card_images[0].image_url" :alt="info.name">
         </div>
         <div class="text-card">
-            <h6>Nome Carta</h6>
-            <h6>Tipo Carta</h6> 
+            <h5>{{info.name}}</h5>
+            <h6>{{info.archetype}}</h6> 
         </div>
     </div>
     
@@ -22,7 +22,8 @@
 @use "../src/style/partials/variables.scss" as *;
 
     .card-container{
-        width: calc( 100% / 5 );
+        width: calc( 100% / 5 - 20px);
+        
 
         .img-container{
         
@@ -34,6 +35,20 @@
 
         .text-card{
             background-color: $bg-color;
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+            margin-bottom: 20px;
+
+            h5{
+                color: #fff;
+                margin-bottom: 10px;
+                font-size: 20px;
+            }
+
+            h6{
+                font-size: 15px;
+            }
         }
     }
 </style>
