@@ -1,13 +1,14 @@
 <script>
     export default{
-        name: "AppCard"
+        name: "AppCard",
+        props: ["info"]
     }
 </script>
 
 <template>
     <div class="card-container">
         <div class="img-container">
-            <img src="https://images.ygoprodeck.com/images/cards/34541863.jpg" alt="">
+            <img :src="info.card_images[0].image_url" alt="">
         </div>
         <div class="text-card">
             <h6>Nome Carta</h6>

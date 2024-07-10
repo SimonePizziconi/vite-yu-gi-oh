@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "ajax": "^0.0.4",
+    "axios": "^1.7.2",
     "vue": "^3.4.29"
   },
   "devDependencies": {

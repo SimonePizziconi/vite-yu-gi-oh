@@ -1,10 +1,18 @@
 <script>
 import AppCard from "./AppCard.vue";
+
+import { store } from "../store";
+
     export default{
         name: "AppCardContainer",
         components: {
             AppCard,
-        }
+        },
+        data (){
+            return {
+            store,
+            }
+        },
 
     }
 </script>
@@ -15,7 +23,7 @@ import AppCard from "./AppCard.vue";
             <h3>Sono State Trovate 20 Carte</h3>
         </div>
         <div class="card-container">
-            <AppCard/>
+            <AppCard v-for="(card, i) in store.charactersList" :key="card.id" :info="card"/>
         </div>
         
 
